@@ -10,25 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_26_204247) do
+ActiveRecord::Schema.define(version: 2021_01_30_173232) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "plants", force: :cascade do |t|
     t.string "species"
-    t.integer "light_needs"
-    t.integer "humidity_needs"
+    t.integer "light_requirement"
+    t.integer "humidity_requirement"
     t.integer "water_frequency"
     t.date "last_watering"
     t.date "last_fertilization"
     t.string "comments"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "room_id"
+    t.integer "space_id"
   end
 
-  create_table "rooms", force: :cascade do |t|
+  create_table "spaces", force: :cascade do |t|
     t.string "name"
     t.integer "humidity"
     t.integer "light"
