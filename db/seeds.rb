@@ -5,8 +5,6 @@ bathroom = Space.create(name: "Bathroom", humidity: 4, light: 2)
 bedroom = Space.create(name: "Bedroom", humidity: 1, light: 3)
 livingroom = Space.create(name: "Living Room", humidity: 1, light: 4)
 greenhouse = Space.create(name: "Green House", humidity: 5, light: 5)
-test1 = Space.create(name: "test1", humidity: 1, light: 1)
-test2 = Space.create(name: "test2", humidity: 1, light: 1)
 
 Plant.create(space_id: bathroom.id, species: "Jade Plant", light_requirement: 3, humidity_requirement: 1, water_frequency: 14, last_watering: Date.today-10, last_fertilization: Date.today-30)
 Plant.create(space_id: bathroom.id, species: "Pothos", light_requirement: 4, humidity_requirement: 3, water_frequency: 10, last_watering: Date.today, last_fertilization: Date.today-30)
